@@ -1,5 +1,10 @@
 # Rust-Book
 
+Looking for a free self-hosted address book for RustDesk OSS?
+
+Rust-Book provides account login and a shared legacy address book
+without requiring RustDesk Server Pro.
+
 Rust-Book is a small, unofficial RustDesk-compatible account and legacy address-book API server.
 
 It lets an unmodified RustDesk client log in to a custom API server and synchronize one legacy address book per Rust-Book account. It does not replace RustDesk's rendezvous or relay services.
