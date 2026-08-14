@@ -1,0 +1,93 @@
+# Local configuration and secrets
+/config/config.php
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+
+# Runtime SQLite data
+/data/*.sqlite
+/data/*.sqlite3
+/data/*.db
+/data/*.db-journal
+/data/*.sqlite3-journal
+/data/*-wal
+/data/*-shm
+/data/*.sqlite3-wal
+/data/*.sqlite3-shm
+/data/*.bak-*
+/data/backups/
+/data/sessions/*
+!/data/sessions/.gitkeep
+/data/tokens.json
+/data/tokens.json.lock
+/data/address-books/*.json
+/data/address-books/*.json.lock
+/data/address-books/.tmp-*
+
+# Logs, backups, archives, and generated output
+*.log
+*.bak
+*.backup
+*.tmp
+*.temp
+*.swp
+*.swo
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+coverage/
+build/
+dist/
+tmp/
+temp/
+
+# Certificates, keys, tokens, and RustDesk server private material
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+id_ed25519
+id_ed25519.pub
+*.pub
+*.token
+*.tokens
+
+# RustDesk server binaries/source trees and private diagnostics from local work
+/hbbs
+/hbbr
+/hbbs-patched/
+/rustdesk-hbbs-context/
+/docs/PHASE*.md
+/rustdesk-server/
+/rustdesk-server-*/
+/rustdesk/
+/rustdesk-*/
+/opt/
+
+# Local web-server/runtime artifacts
+/public/install.lock
+xampp/
+apache/logs/
+nginx/logs/
+
+# Dependencies and caches
+/vendor/
+composer.phar
+.phpunit.cache/
+.phpunit.result.cache
+.cache/
+
+# Editor and OS files
+.idea/
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini

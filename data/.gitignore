@@ -1,0 +1,7 @@
+*
+!.gitignore
+!README.md
+!.htaccess
+!address-books/
+!sessions/
+!sessions/.gitkeep

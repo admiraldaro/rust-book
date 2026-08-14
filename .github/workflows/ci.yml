@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - '8.2'
+          - '8.3'
+          - '8.4'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: json, pdo, pdo_sqlite, sqlite3, session
+          coverage: none
+
+      - name: Show PHP version
+        run: php -v
+
+      - name: PHP syntax and PHP 7.3 static guard
+        run: sh tests/php73_static_guard.sh
+
+      - name: API smoke test
+        run: bash tests/curl_api_smoke.sh

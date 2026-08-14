@@ -1,0 +1,15 @@
+/var/log/nginx/rust-book.access.log
+/var/log/nginx/rust-book.error.log
+/var/log/php-fpm/rust-book.error.log {
+    weekly
+    rotate 8
+    missingok
+    notifempty
+    compress
+    delaycompress
+    create 0640 root adm
+    sharedscripts
+    postrotate
+        [ -x /usr/sbin/nginx ] && /usr/sbin/nginx -s reopen || true
+    endscript
+}

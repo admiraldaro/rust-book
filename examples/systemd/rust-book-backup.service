@@ -1,0 +1,10 @@
+[Unit]
+Description=Rust-Book SQLite backup
+
+[Service]
+Type=oneshot
+Environment=RUST_BOOK_DB_PATH=/var/lib/rust-book/rust-book.sqlite3
+Environment=RUST_BOOK_BACKUP_DIR=/var/backups/rust-book
+ExecStart=/usr/local/sbin/rust-book-backup
+User=rust-book
+Group=rust-book

@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+# Optional SQLite backup helper.
+# Run as a user that can read the live database and write BACKUP_DIR.
+
+DB_PATH="${RUST_BOOK_DB_PATH:-/var/lib/rust-book/rust-book.sqlite3}"
+BACKUP_DIR="${RUST_BOOK_BACKUP_DIR:-/var/backups/rust-book}"
+STAMP="$(date -u +%Y%m%d-%H%M%S)"
+
+mkdir -p "$BACKUP_DIR"
+umask 077
+
+sqlite3 "$DB_PATH" ".backup '$BACKUP_DIR/rust-book-$STAMP.sqlite3'"
+find "$BACKUP_DIR" -type f -name 'rust-book-*.sqlite3' -mtime +30 -delete

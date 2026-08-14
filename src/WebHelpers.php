@@ -1,0 +1,7 @@
+<?php
+declare(strict_types=1);
+
+function h($value)
+{
+    return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+}
