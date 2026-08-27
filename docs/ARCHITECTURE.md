@@ -1,3 +1,9 @@
+---
+layout: default
+title: Architecture | Rust-Book
+description: Architecture notes for the Rust-Book PHP and SQLite account and legacy address-book API server.
+---
+
 # Architecture
 
 Rust-Book is a small PHP application with a front controller and SQLite persistence.

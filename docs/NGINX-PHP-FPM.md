@@ -1,3 +1,9 @@
+---
+layout: default
+title: nginx and PHP-FPM | Rust-Book
+description: nginx and PHP-FPM deployment notes for a hardened Rust-Book installation.
+---
+
 # nginx And PHP-FPM
 
 Use `examples/nginx/rust-book.conf` and `examples/php-fpm/rust-book.conf` as starting points.

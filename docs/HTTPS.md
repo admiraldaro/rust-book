@@ -1,3 +1,9 @@
+---
+layout: default
+title: HTTPS | Rust-Book
+description: HTTPS, certificate, custom port, and HSTS guidance for Rust-Book deployments with RustDesk clients.
+---
+
 # HTTPS
 
 Use HTTPS for any RustDesk client that is not strictly on localhost.

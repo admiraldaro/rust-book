@@ -1,3 +1,9 @@
+---
+layout: default
+title: RustDesk Compatibility | Rust-Book
+description: RustDesk client, address-book API, hbbs, hbbr, and secure TCP compatibility notes for Rust-Book.
+---
+
 # RustDesk Compatibility
 
 Rust-Book is an account and legacy address-book API. It is not a RustDesk server distribution.

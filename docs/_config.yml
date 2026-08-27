@@ -1,0 +1,30 @@
+title: Rust-Book
+description: Free self-hosted address book and account server for RustDesk OSS, built with PHP and SQLite for the legacy RustDesk address book API.
+lang: en
+locale: en_US
+url: "https://admiraldaro.github.io"
+baseurl: "/rust-book"
+repository: admiraldaro/rust-book
+
+github_repository_url: "https://github.com/admiraldaro/rust-book"
+github_issues_url: "https://github.com/admiraldaro/rust-book/issues"
+secure_tcp_patch_url: "https://github.com/admiraldaro/rustdesk-server-secure-tcp-patch"
+
+markdown: kramdown
+
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

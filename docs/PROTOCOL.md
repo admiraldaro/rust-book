@@ -1,3 +1,9 @@
+---
+layout: default
+title: Protocol Notes | Rust-Book
+description: RustDesk-compatible login, currentUser, logout, legacy address-book, and compatibility-stub API behavior implemented by Rust-Book.
+---
+
 # Protocol Notes
 
 Rust-Book implements a small RustDesk-compatible API surface for login and legacy address-book synchronization. RustDesk's account API is not a formal stable public protocol, so this document separates verified behavior from assumptions.

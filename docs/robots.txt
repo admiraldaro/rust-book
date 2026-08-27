@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /rust-book/
+
+Sitemap: https://admiraldaro.github.io/rust-book/sitemap.xml

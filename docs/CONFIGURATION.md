@@ -1,3 +1,9 @@
+---
+layout: default
+title: Configuration | Rust-Book
+description: Configuration reference for Rust-Book, including SQLite, token lifetime, login throttling, and admin sessions.
+---
+
 # Configuration
 
 Rust-Book uses one PHP configuration file:

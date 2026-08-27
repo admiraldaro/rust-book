@@ -1,3 +1,9 @@
+---
+layout: default
+title: Deployment | Rust-Book
+description: Deployment checks for serving Rust-Book through PHP, SQLite, HTTPS, Apache, nginx, or PHP-FPM.
+---
+
 # Deployment
 
 Deployment means serving Rust-Book's `public/` directory through a real web server and running PHP with access to the private application files and SQLite database.

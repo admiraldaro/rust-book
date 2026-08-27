@@ -1,3 +1,9 @@
+---
+layout: default
+title: Troubleshooting | Rust-Book
+description: Troubleshooting guide for Rust-Book login, legacy address book, Authorization headers, HTTPS, SQLite, and RustDesk connection issues.
+---
+
 # Troubleshooting
 
 ## Login Works But The Address Book Does Not Appear

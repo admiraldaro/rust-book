@@ -1,3 +1,9 @@
+---
+layout: default
+title: Database | Rust-Book
+description: SQLite schema, migration, token, password, and legacy address-book storage notes for Rust-Book.
+---
+
 # Database
 
 Rust-Book uses one SQLite database:

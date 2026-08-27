@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#11151c" media="(prefers-color-scheme: dark)">
+
+    {% assign inferred_title = page.name | default: site.title | remove: '.md' | remove: '.html' | replace: '-', ' ' | replace: '_', ' ' %}
+    {% if page.title %}
+    {% assign meta_title = page.title %}
+    {% else %}
+    {% assign meta_title = inferred_title | append: ' | ' | append: site.title %}
+    {% endif %}
+    {% assign meta_description = page.description | default: site.description %}
+
+    <title>{{ meta_title | escape }}</title>
+    <meta name="description" content="{{ meta_description | escape }}">
+    {% if page.canonical_url %}
+    <link rel="canonical" href="{{ page.canonical_url }}">
+    {% else %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    {% endif %}
+
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:title" content="{{ meta_title | escape }}">
+    <meta property="og:description" content="{{ meta_description | escape }}">
+    {% if page.canonical_url %}
+    <meta property="og:url" content="{{ page.canonical_url }}">
+    {% else %}
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    {% endif %}
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="{{ site.locale | default: 'en_US' }}">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ meta_title | escape }}">
+    <meta name="twitter:description" content="{{ meta_description | escape }}">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+
+    {% if page.url == "/" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Rust-Book",
+      "description": {{ site.description | jsonify }},
+      "codeRepository": {{ site.github_repository_url | jsonify }},
+      "license": "https://opensource.org/license/mit",
+      "programmingLanguage": "PHP",
+      "operatingSystem": "Linux, Windows",
+      "applicationCategory": "DeveloperApplication"
+    }
+    </script>
+    {% endif %}
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap nav-wrap">
+        <a class="brand" href="{{ site.baseurl }}/" aria-label="Rust-Book home">
+          <span class="brand-mark" aria-hidden="true">RB</span>
+          <span>Rust-Book</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="https://github.com/admiraldaro/rust-book/blob/main/INSTALL.md">Install</a>
+          <a href="{{ site.baseurl }}/CONFIGURATION.html">Configuration</a>
+          <a href="{{ site.baseurl }}/PROTOCOL.html">API</a>
+          <a href="{{ site.baseurl }}/RUSTDESK-COMPATIBILITY.html">Compatibility</a>
+          <a href="{{ site.github_repository_url }}">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="page-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <p>
+          Rust-Book is independent, unofficial community software. RustDesk is
+          separate software and is not affiliated with or endorsed by this project.
+        </p>
+        <p>
+          Rust-Book is released under the MIT License.
+          The optional secure TCP patch project for <code>hbbs</code> is separate
+          and AGPL-3.0 licensed.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

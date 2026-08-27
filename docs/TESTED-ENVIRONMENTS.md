@@ -1,3 +1,9 @@
+---
+layout: default
+title: Tested Environments | Rust-Book
+description: Verified and expected Rust-Book runtime environments, including PHP 7.3 legacy ARM deployment details.
+---
+
 # Tested Environments
 
 This document separates verified environments from expected or unknown compatibility.
